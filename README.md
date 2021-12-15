@@ -1,4 +1,4 @@
-### <span style="text-decoration:underline">[English](https://gitee.com/kuaishao_admin/esbuild-plugin-typescript-decorators/blob/master/README.md)</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span style="text-decoration:underline;padding-left:30px">[中文](https://gitee.com/kuaishao_admin/esbuild-plugin-typescript-decorators/blob/master/README-zh.md)</span>
+### <span style="text-decoration:underline">[English](https://gitee.com/inardy/esbuild-plugin-typescript-decorators/blob/master/README.md)</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span style="text-decoration:underline;padding-left:30px">[中文](https://gitee.com/inardy/esbuild-plugin-typescript-decorators/blob/master/README-zh.md)</span>
 
 ----
 
