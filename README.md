@@ -5,3 +5,17 @@
 > The esbuild build tool does not support typescript's [`emitdecoratormetadata`] (https://esbuild.github.io/content-types/#no-type-system) by default.
 > 
 > when using decorator development, when obtaining such as `Reflect.getMetadata ("design: type", target, key)`, it returns `undefined` by default. However, using this plugin, it will return the correct value by use the above method
+
+### Usage
+
+```js
+import esbuild from 'esbuild'
+import { esbuildDecorators } from 'esbuild-plugin-typescript-decorators'
+
+esbuild.build({
+    // ...config,
+    plugins: [
+        esbuildDecorators()
+    ]
+})
+```
