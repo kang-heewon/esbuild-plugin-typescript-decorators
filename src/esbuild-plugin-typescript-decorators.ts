@@ -1,3 +1,4 @@
+import os from "os"
 import path from 'path'
 import fs from 'fs/promises'
 import typescript from 'typescript'
@@ -30,7 +31,9 @@ const findDecorators = (content: string) => {
     return false
   }
   content = content.replace(FIND_COMMON_REGX, '').trim()
-  return FIND_DECORATOR_REGX.test(content)
+  const lines = content.split(os.EOL)
+    .filter(line => !line.startsWith("import ") && line.indexOf("@") > -1)
+  return !!lines.find(line => FIND_DECORATOR_REGX.test(line))
 }
 
 export type PluginOptions = {
