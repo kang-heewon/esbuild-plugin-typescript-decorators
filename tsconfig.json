@@ -11,6 +11,7 @@
         "declarationMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "emitDeclarationOnly": false,
         "lib": ["DOM", "esnext"],
         "baseUrl": "./"
     },

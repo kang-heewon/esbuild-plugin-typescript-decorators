@@ -1,4 +1,4 @@
-export declare type PluginOptions = {
+export type PluginOptions = {
     tsconfig?: string;
     force?: boolean;
     tsx?: boolean;

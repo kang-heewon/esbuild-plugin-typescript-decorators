@@ -1,22 +1,33 @@
 {
   "name": "esbuild-plugin-typescript-decorators",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "让ESBuild支持装饰器",
   "main": "src/esbuild-plugin-typescript-decorators.js",
   "types": "src/esbuild-plugin-typescript-decorators.d.ts",
   "scripts": {
-    "pub": "npm publish --registry=https://registry.npmjs.org",
+    "build": "tsc",
+    "pub": "npm run build && npm publish --registry=https://registry.npmjs.org",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "src/esbuild-plugin-typescript-decorators.d.ts",
+    "src/esbuild-plugin-typescript-decorators.js",
+    "package.json",
+    "tsconfig.json",
+    "LICENSE",
+    "CHANGELOG.md",
+    "README-zh.md",
+    "README.md"
+  ],
   "keywords": [
     "esbuild", "esbuild-plugin", "typescript",
     "decoraters", "emitDecoratorMetadata"
   ],
   "dependencies": {
-    "typescript": "^4.7.4"
+    "typescript": "^4.9.5"
   },
   "devDependencies": {
-    "@types/node": "^18.0.6"
+    "@types/node": "^18.11.18"
   },
   "repository": {
     "type": "git",
