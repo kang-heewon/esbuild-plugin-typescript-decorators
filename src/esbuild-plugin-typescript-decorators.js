@@ -37,7 +37,6 @@ const parseTsConfig = (tsconfig, cwd = process.cwd()) => {
     return parsedConfig;
 };
 const FIND_COMMON_REGX = /(\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/)|(\/\/.*)/g;
-const FIND_DECORATOR_REGX = /[^'"]@[a-zA-Z$_][\w$]+|[^'"]@\([a-zA-Z$_][\w$]+\)\(/g;
 const findDecorators = (content) => {
     var _a;
     content = (_a = content === null || content === void 0 ? void 0 : content.trim) === null || _a === void 0 ? void 0 : _a.call(content);
@@ -46,8 +45,8 @@ const findDecorators = (content) => {
     }
     content = content.replace(FIND_COMMON_REGX, '').trim();
     const lines = content.split(os_1.default.EOL)
-        .filter(line => !line.startsWith("import ") && line.indexOf("@") > -1);
-    return !!lines.find(line => FIND_DECORATOR_REGX.test(line));
+        .filter(line => !line.startsWith("import ") && !line.startsWith('} from ') && line.indexOf("@") > -1);
+    return lines.length > 0;
 };
 const esbuildDecorators = (options = {}) => {
     return {

@@ -1,7 +1,7 @@
 {
-  "name": "esbuild-plugin-typescript-decorators",
+  "name": "@kang-heewon/esbuild-plugin-typescript-decorators",
   "version": "0.1.0",
-  "description": "让ESBuild支持装饰器",
+  "description": "",
   "main": "src/esbuild-plugin-typescript-decorators.js",
   "types": "src/esbuild-plugin-typescript-decorators.d.ts",
   "scripts": {
@@ -36,7 +36,7 @@
   "bugs": {
     "url": "https://github.com/jcindex/esbuild-plugin-typescript-decorators/issues"
   },
-  "author": "Nardy <1259145811@qq.com>",
+  "author": "kang-heewon <heewon.dev@gmail.com>",
   "license": "ISC",
-  "homepage": "https://github.com/jcindex/esbuild-plugin-typescript-decorators#readme"
+  "homepage": "https://github.com/kang-heewon/esbuild-plugin-typescript-decorators#readme"
 }

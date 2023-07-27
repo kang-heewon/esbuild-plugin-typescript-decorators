@@ -24,7 +24,6 @@ const parseTsConfig = (tsconfig: string, cwd = process.cwd()) => {
 }
 
 const FIND_COMMON_REGX = /(\/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/)|(\/\/.*)/g
-const FIND_DECORATOR_REGX = /[^'"]@[a-zA-Z$_][\w$]+|[^'"]@\([a-zA-Z$_][\w$]+\)\(/g
 const findDecorators = (content: string) => {
   content = content?.trim?.()
   if(!content) {
@@ -32,8 +31,8 @@ const findDecorators = (content: string) => {
   }
   content = content.replace(FIND_COMMON_REGX, '').trim()
   const lines = content.split(os.EOL)
-    .filter(line => !line.startsWith("import ") && line.indexOf("@") > -1)
-  return !!lines.find(line => FIND_DECORATOR_REGX.test(line))
+  .filter(line => !line.startsWith("import ") && !line.startsWith('} from ') && line.indexOf("@") > -1);
+  return lines.length > 0;
 }
 
 export type PluginOptions = {
